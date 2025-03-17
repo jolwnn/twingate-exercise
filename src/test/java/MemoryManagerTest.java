@@ -72,7 +72,7 @@ public class MemoryManagerTest {
     }
 
     /**
-     * Test that adjacent free blocks are merged (coalesced) so that subsequent allocations
+     * Test that adjacent free blocks are merged so that subsequent allocations
      * can be made in a single contiguous segment.
      */
     @Test
