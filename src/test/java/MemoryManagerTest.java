@@ -85,8 +85,8 @@ public class MemoryManagerTest {
         memoryManager.free(seq1);
         // After coalescing, allocating 5 bytes should succeed as one contiguous block.
         MemoryManager.MemorySequence seq4 = memoryManager.alloc(5);
-        assertNotNull(seq4, "Allocation of 5 bytes should succeed after coalescing adjacent free blocks.");
-        assertEquals(1, seq4.getSegments().size(), "Should be a single segment after coalescing.");
+        assertNotNull(seq4, "Allocation of 5 bytes should succeed after merging adjacent free blocks.");
+        assertEquals(1, seq4.getSegments().size(), "Should be a single segment after merging.");
     }
 
     /**
